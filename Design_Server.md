@@ -11,14 +11,13 @@
 
 ## Environment Constants
 ```C#
-VERSION = 4             // protocol version number
+VERSION = 5             // protocol version number
 
 NUM_ARGS = 2            // number of command line arguments
-GAME_TIMEOUT = 30       // number of seconds spent waiting before a timeout
-SERVER_TIMEOUT = TBD    // number of seconds spent waiting before a timeout
-MAX_RESENDS = TBD       // maximum number of resend attempts before resetting a game
+BACKLOG_MAX = TBD       // max length for queue of pending connections
 ROWS = 3                // number of rows for the TicIacToe board
 COLUMNS = 3             // number of columns for the TicIacToe board
+CMD_SIZE = 5            // game command size (in bytes)
 MAX_GAMES = TBD         // maximum number of games that can be played simultaneously
 P1_MARK = TBD           // baord marker used for Player 1
 P2_MARK = TBD           // baord marker used for Player 2
@@ -33,17 +32,14 @@ GAME_OVER = 0x02        // command to end a game
 Structure for each TicTacToe game.
 ```C
 struct TTT_Game {
+    int sd;                         // socket descriptor for connected player
     int gameNum;                    // game number
     int seqNum;                     // sequence number game currently on
-    double timeout;                 // amount of time before game timeout
-    int resends;                    // number of resends before quitting game
-    struct sockaddr_in p2Address;   // address of remote player for game
     int winner;                     // player who won, 0 if draw, -1 if game ongoing
-    struct Buffer lastSent;         // previous command sent in game
     char board[ROWS*COLUMNS];       // TicTacToe game board state
 };
 ```
-Structure to send and recieve player datagrams.
+Structure to send and recieve player messages.
 ```C
 struct Buffer {
     char version;   // version number
