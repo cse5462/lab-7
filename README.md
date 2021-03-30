@@ -1,4 +1,4 @@
-# TicTacToe Program – MultiPlayer
+# TicTacToe Program – MultiPlayer - STREAM
 > This is the README file for [Lab_7](https://osu.instructure.com/courses/97443/files/27903206/download?download_frd=1)
 
 **NAME:** Conner Graham, Ben Nagel  
@@ -33,20 +33,14 @@ with, initializes a set of game boards, and processes any commands received
 from other players. These commands can include initializing a game of TicTacToe
 when a player requests one, responding to other player's moves until a
 winner is found or the game is a draw, or ending a game of TicTacToe when a player
-requests to. If a player takes too long to respond, the game times out and either
-the previous command is resent or the game is reset for another player to play.
-If no player responds to the server for a period of time, the server times out and
-either the previous command is resent for each ongoing game or the game is reset
-for another player to play.
+requests to. If a player leaves the game (i.e. closes the connection) the game is
+reset for another player to play.
 The specific tasks the server performs are as follows:
 - Create and bind server socket from user provided port
-- Print server info and listen for commands
+- Print server info and listen for client connections
 - Initialize all game boards
-- Set server timeout time
-- Accept UDP DGRAM command from waiting client
+- Accept TCP STREAM connections from waiting clients
 - Process the command for the corresponding game
-- Resend commands (or end) for ongoing games that have timed out
-- Resend commands (or end) for ongoing games if server has timed out
 
 If the number of arguments is incorrect or the remote port is
 invalid, the program prints appropriate messages and shows how to
@@ -67,9 +61,6 @@ arguments will need to be enclosed in quotes.
   find another serevr to connect to if they sich to play.
 - It is assumed that the client will never enter the int -1 (char '/')
   for a move as it is being used as an error code.
-- It is assumed that the player making the "New Game" request will
-  always send their messages from the same IP address and port number
-  used to make the request.
 - It is assumed that messages with a sequence number that has already
   been processed will be ingnored.
 - It is assumed that messages with a sequence number above the current
