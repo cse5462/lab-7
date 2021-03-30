@@ -70,14 +70,15 @@ arguments will need to be enclosed in quotes.
 > By: Ben Nagel
 
 ### DESCRIPTION <a name="description-client"></a>
-This lab contains a program called "tictactoeClient" which creates and sets up a datagram transfer protocal client. This client sends datagrams to the specified server( IP address and port), reads in a datagram from the server and sends a datagram back. This process continues until a winner or a tie has been reached.
+This lab contains a program called "tictactoeClient" which creates and sets up a 5 byte transfer protocal client. This client connects to the specified server( IP address and port). Next,this client sends 5 bytes of data to the specified server( IP address and port) and then reads in 5 bytes of data from the server. This process continues until a winner or a tie has been reached.
 
 The specific tasks the client performs are as
 follows:
+- Connect to the Server
+- 
 - Create server socket from user provided IP/port
-- Perform datagram transfer over the connection
-- Handle duplicate datagrams
-- Handle lost datagrams
+- Send Stream Socket connection requests to the server
+- Process recieved data
 - Terminate the connection to the server
 
 ### USAGE <a name="usage-client"></a>
@@ -90,11 +91,9 @@ If any of the argument strings contain whitespace, those
 arguments will need to be enclosed in quotes.
 
 ### ASSUMPTIONS <a name="assumptions-client"></a>
-- Client send and recieves a 40 byte datagram(excluding the inital datagram which is 2 bytes)
-- A datagram is sent and recevied 
+- Client send and recieves a 5 bytes 
 - The spaces on the tictactoe board are 1-9
 - Player 1 is the "server": they are the one who calls bind()   
 - Player 1 goes first
 - On any errors, close the connection 
-- Timeout Time 30s
 - It is assumed that the IP addresses 0.0.0.0 and 255.255.255.255 are invalid remote server addresses to connect to as they are reserved values.
