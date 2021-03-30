@@ -1,9 +1,9 @@
 # TicTacToe Server (Player 1) Design
-> This is the design document for the TicTacToe Server ([tictactoeServer.c](https://github.com/CSE-5462-Spring-2021/assignment-6-conner-ben/blob/main/tictactoeServer.c)).  
+> This is the design document for the TicTacToe Server ([tictactoeServer.c](https://github.com/CSE-5462-Spring-2021/assignment7-conner-ben/blob/main/tictactoeServer.c)).  
 > By: Conner Graham
 
 ## Table of Contents
-- TicTacToe Class Protocol - [Protocol Document](https://docs.google.com/document/d/1H9yrRi0or_yTt-0xs5QAp2C6umw2qWW1FDL3EyVwF5g/edit?usp=sharing)
+- TicTacToe Class Protocol - [Protocol Document](https://docs.google.com/document/d/1TdURyFGCPU5t9XKMJgmWjt4Qqg4z8tZyW1bvMw0EmvI/edit?usp=sharing)
 - [Environment Constants](#environment-constants)
 - [Environment Structures](#environment-structures)
 - [High-Level Architecture](#high-level-architecture)
