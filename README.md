@@ -75,7 +75,6 @@ This lab contains a program called "tictactoeClient" which creates and sets up a
 The specific tasks the client performs are as
 follows:
 - Connect to the Server
-- 
 - Create server socket from user provided IP/port
 - Send Stream Socket connection requests to the server
 - Process recieved data
