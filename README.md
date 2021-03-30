@@ -1,8 +1,8 @@
 # TicTacToe Program – MultiPlayer
-> This is the README file for [Lab_6](https://osu.instructure.com/courses/97443/files/27903200/download?download_frd=1)
+> This is the README file for [Lab_7](https://osu.instructure.com/courses/97443/files/27903206/download?download_frd=1)
 
 **NAME:** Conner Graham, Ben Nagel  
-**DATE:** 03/18/2021
+**DATE:** 03/30/2021
 
 ## Table of Contents:
 - [Included Files](#included-files)
@@ -16,11 +16,11 @@
   - [Assumptions](#assumptions-client)
 
 ## Included Files
-- [makefile](https://github.com/CSE-5462-Spring-2021/assignment-6-conner-ben/blob/main/makefile)
-- Server (Player 1) Design Document - [Design_Server.md](https://github.com/CSE-5462-Spring-2021/assignment-6-conner-ben/blob/main/Design_Server.md)
-- TicTacToe Server Source Code - [tictactoeServer.c](https://github.com/CSE-5462-Spring-2021/assignment-6-conner-ben/blob/main/tictactoeServer.c)
-- Client (Player 2) Design Document - [Design_Client.md](https://github.com/CSE-5462-Spring-2021/assignment-6-conner-ben/blob/main/Design_Client.md)
-- TicTacToe Client Source Code - [tictactoeClient.c](https://github.com/CSE-5462-Spring-2021/assignment-6-conner-ben/blob/main/tictactoeClient.c)
+- [makefile](https://github.com/CSE-5462-Spring-2021/assignment7-conner-ben/blob/main/makefile)
+- Server (Player 1) Design Document - [Design_Server.md](https://github.com/CSE-5462-Spring-2021/assignment7-conner-ben/blob/main/Design_Server.md)
+- TicTacToe Server Source Code - [tictactoeServer.c](https://github.com/CSE-5462-Spring-2021/assignment7-conner-ben/blob/main/tictactoeServer.c)
+- Client (Player 2) Design Document - [Design_Client.md](https://github.com/CSE-5462-Spring-2021/assignment7-conner-ben/blob/main/Design_Client.md)
+- TicTacToe Client Source Code - [tictactoeClient.c](https://github.com/CSE-5462-Spring-2021/assignment7-conner-ben/blob/main/tictactoeClient.c)
 
 ## TicTacToe Server
 > By: Conner Graham
